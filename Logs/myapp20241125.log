@@ -1,0 +1,263 @@
+2024-11-25 03:00:06.031 +05:30 [WRN] As of ""2024-11-24T19:34:30.2897307+00:00"", the heartbeat has been running for ""00:00:01.0223615"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+2024-11-25 10:51:46.639 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - null null
+2024-11-25 10:51:46.755 +05:30 [INF] CORS policy execution successful.
+2024-11-25 10:51:46.805 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - 204 null null 191.7026ms
+2024-11-25 10:51:46.836 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - application/json 37
+2024-11-25 10:51:46.855 +05:30 [INF] CORS policy execution successful.
+2024-11-25 10:51:46.866 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-11-25 10:51:47.111 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 10:51:47.300 +05:30 [INF] Route matched with {action = "SendPasswordResetLink", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendPasswordResetLink(ForgotPasswordApp.Models.ForgotPasswordRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 10:51:52.105 +05:30 [INF] Executed DbCommand (109ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 10:51:52.886 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetTokens] ([CreatedAt], [Email], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2024-11-25 10:52:00.648 +05:30 [INF] Password reset link sent to: karthickarul254@gmail.com
+2024-11-25 10:52:00.671 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-25 10:52:00.691 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp) in 13376.1554ms
+2024-11-25 10:52:00.696 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 10:52:00.717 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - 200 null text/plain; charset=utf-8 13880.9282ms
+2024-11-25 10:52:32.282 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - null null
+2024-11-25 10:52:32.293 +05:30 [INF] CORS policy execution successful.
+2024-11-25 10:52:32.298 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - 204 null null 15.9888ms
+2024-11-25 10:52:32.307 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - application/json 37
+2024-11-25 10:52:32.314 +05:30 [INF] CORS policy execution successful.
+2024-11-25 10:52:32.323 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 10:52:32.330 +05:30 [INF] Route matched with {action = "SendPasswordResetLink", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendPasswordResetLink(ForgotPasswordApp.Models.ForgotPasswordRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 10:52:32.557 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 10:52:32.580 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetTokens] ([CreatedAt], [Email], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2024-11-25 10:52:39.439 +05:30 [INF] Password reset link sent to: karthickarul254@gmail.com
+2024-11-25 10:52:39.459 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-25 10:52:39.515 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp) in 7178.122ms
+2024-11-25 10:52:39.565 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 10:52:39.573 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - 200 null text/plain; charset=utf-8 7265.443ms
+2024-11-25 10:54:19.818 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/verify-token-and-update-password - null null
+2024-11-25 10:54:19.832 +05:30 [INF] CORS policy execution failed.
+2024-11-25 10:54:19.838 +05:30 [INF] Request origin http://127.0.0.1:5502 does not have permission to access the resource.
+2024-11-25 10:54:19.843 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/verify-token-and-update-password - 204 null null 27.0331ms
+2024-11-25 10:55:02.159 +05:30 [INF] Application is shutting down...
+2024-11-25 10:55:39.014 +05:30 [INF] User profile is available. Using 'C:\Users\ksubramanian\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-25 10:55:39.234 +05:30 [INF] Now listening on: http://localhost:5026
+2024-11-25 10:55:39.240 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-25 10:55:39.243 +05:30 [INF] Hosting environment: Development
+2024-11-25 10:55:39.245 +05:30 [INF] Content root path: C:\Users\ksubramanian\ForgotPasswordApp
+2024-11-25 10:55:44.703 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/verify-token-and-update-password - null null
+2024-11-25 10:55:44.735 +05:30 [INF] CORS policy execution successful.
+2024-11-25 10:55:44.760 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/verify-token-and-update-password - 204 null null 61.5007ms
+2024-11-25 10:55:44.782 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/verify-token-and-update-password - application/json 138
+2024-11-25 10:55:44.789 +05:30 [INF] CORS policy execution successful.
+2024-11-25 10:55:44.800 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-11-25 10:55:44.875 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.VerifyTokenAndUpdatePassword (ForgotPasswordApp)'
+2024-11-25 10:55:44.944 +05:30 [INF] Route matched with {action = "VerifyTokenAndUpdatePassword", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyTokenAndUpdatePassword(VerifyTokenRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 10:55:49.257 +05:30 [INF] Executed DbCommand (148ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Token_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Email], [p].[Token]
+FROM [PasswordResetTokens] AS [p]
+WHERE [p].[Email] = @__model_Email_0 AND [p].[Token] = @__model_Token_1
+2024-11-25 10:55:49.646 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 10:55:50.054 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-25 10:55:50.426 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p19='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [Address] = @p1, [ConcurrencyStamp] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [FullName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [Pincode] = @p13, [SecurityStamp] = @p14, [State] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2024-11-25 10:55:50.488 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [PasswordResetTokens]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-11-25 10:55:50.528 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-25 10:55:50.678 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.VerifyTokenAndUpdatePassword (ForgotPasswordApp) in 5698.6807ms
+2024-11-25 10:55:50.692 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.VerifyTokenAndUpdatePassword (ForgotPasswordApp)'
+2024-11-25 10:55:50.739 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/verify-token-and-update-password - 200 null application/json; charset=utf-8 5948.7455ms
+2024-11-25 11:03:35.371 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - null null
+2024-11-25 11:03:35.458 +05:30 [INF] CORS policy execution successful.
+2024-11-25 11:03:35.476 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - 204 null null 125.9299ms
+2024-11-25 11:03:35.497 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - application/json 37
+2024-11-25 11:03:35.504 +05:30 [INF] CORS policy execution successful.
+2024-11-25 11:03:35.587 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 11:03:35.735 +05:30 [INF] Route matched with {action = "SendPasswordResetLink", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendPasswordResetLink(ForgotPasswordApp.Models.ForgotPasswordRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 11:03:36.151 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 11:03:36.423 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetTokens] ([CreatedAt], [Email], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2024-11-25 11:03:43.780 +05:30 [INF] Password reset link sent to: karthickarul254@gmail.com
+2024-11-25 11:03:43.787 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-25 11:03:43.820 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp) in 8077.4972ms
+2024-11-25 11:03:43.824 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 11:03:43.828 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - 200 null text/plain; charset=utf-8 8331.1635ms
+2024-11-25 11:03:55.123 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - null null
+2024-11-25 11:03:55.129 +05:30 [INF] CORS policy execution successful.
+2024-11-25 11:03:55.131 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - 204 null null 7.3523ms
+2024-11-25 11:03:55.143 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - application/json 37
+2024-11-25 11:03:55.152 +05:30 [INF] CORS policy execution successful.
+2024-11-25 11:03:55.166 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 11:03:55.178 +05:30 [INF] Route matched with {action = "SendPasswordResetLink", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendPasswordResetLink(ForgotPasswordApp.Models.ForgotPasswordRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 11:03:55.428 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 11:03:55.434 +05:30 [WRN] No user found with this email: tonyavenver2002@gmail.com
+2024-11-25 11:03:55.444 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-11-25 11:03:55.451 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp) in 266.1103ms
+2024-11-25 11:03:55.455 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 11:03:55.459 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - 400 null text/plain; charset=utf-8 315.6267ms
+2024-11-25 14:45:24.204 +05:30 [INF] Application is shutting down...
+2024-11-25 14:46:00.702 +05:30 [INF] User profile is available. Using 'C:\Users\ksubramanian\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-25 14:46:00.970 +05:30 [INF] Now listening on: http://localhost:5026
+2024-11-25 14:46:00.983 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-25 14:46:00.989 +05:30 [INF] Hosting environment: Development
+2024-11-25 14:46:00.994 +05:30 [INF] Content root path: C:\Users\ksubramanian\ForgotPasswordApp
+2024-11-25 14:48:40.418 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - null null
+2024-11-25 14:48:40.544 +05:30 [INF] CORS policy execution successful.
+2024-11-25 14:48:40.618 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - 204 null null 212.7609ms
+2024-11-25 14:48:40.665 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - application/json 37
+2024-11-25 14:48:40.682 +05:30 [INF] CORS policy execution successful.
+2024-11-25 14:48:40.692 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-11-25 14:48:40.843 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 14:48:41.052 +05:30 [INF] Route matched with {action = "SendPasswordResetLink", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendPasswordResetLink(ForgotPasswordApp.Models.ForgotPasswordRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 14:48:47.721 +05:30 [INF] Executed DbCommand (161ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 14:48:48.807 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetTokens] ([CreatedAt], [Email], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2024-11-25 14:48:56.945 +05:30 [INF] Password reset link sent to: karthickarul254@gmail.com
+2024-11-25 14:48:56.964 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-25 14:48:56.976 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp) in 15898.7113ms
+2024-11-25 14:48:56.985 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 14:48:57.003 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - 200 null text/plain; charset=utf-8 16337.4133ms
+2024-11-25 14:49:40.776 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - null null
+2024-11-25 14:49:40.816 +05:30 [INF] CORS policy execution successful.
+2024-11-25 14:49:40.830 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - 204 null null 55.6835ms
+2024-11-25 14:49:40.838 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - application/json 37
+2024-11-25 14:49:40.841 +05:30 [INF] CORS policy execution successful.
+2024-11-25 14:49:40.903 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 14:49:40.919 +05:30 [INF] Route matched with {action = "SendPasswordResetLink", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendPasswordResetLink(ForgotPasswordApp.Models.ForgotPasswordRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 14:49:41.283 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 14:49:41.315 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetTokens] ([CreatedAt], [Email], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2024-11-25 14:49:48.571 +05:30 [INF] Password reset link sent to: karthickarul254@gmail.com
+2024-11-25 14:49:48.700 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-25 14:49:48.740 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp) in 7816.5343ms
+2024-11-25 14:49:48.750 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 14:49:48.755 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - 200 null text/plain; charset=utf-8 7916.8437ms
+2024-11-25 14:51:51.795 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/verify-token-and-update-password - null null
+2024-11-25 14:51:51.820 +05:30 [INF] CORS policy execution successful.
+2024-11-25 14:51:51.832 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/verify-token-and-update-password - 204 null null 41.9899ms
+2024-11-25 14:51:51.847 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/verify-token-and-update-password - application/json 140
+2024-11-25 14:51:51.856 +05:30 [INF] CORS policy execution successful.
+2024-11-25 14:51:51.919 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.VerifyTokenAndUpdatePassword (ForgotPasswordApp)'
+2024-11-25 14:51:52.078 +05:30 [INF] Route matched with {action = "VerifyTokenAndUpdatePassword", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyTokenAndUpdatePassword(VerifyTokenRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 14:51:52.622 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__model_Email_0='?' (Size = 4000), @__model_Token_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CreatedAt], [p].[Email], [p].[Token]
+FROM [PasswordResetTokens] AS [p]
+WHERE [p].[Email] = @__model_Email_0 AND [p].[Token] = @__model_Token_1
+2024-11-25 14:51:52.672 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 14:51:52.930 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-11-25 14:51:53.036 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p18='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p19='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [Address] = @p1, [ConcurrencyStamp] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [FullName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [Pincode] = @p13, [SecurityStamp] = @p14, [State] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2024-11-25 14:51:53.109 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [PasswordResetTokens]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-11-25 14:51:53.126 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-25 14:51:53.240 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.VerifyTokenAndUpdatePassword (ForgotPasswordApp) in 1151.5024ms
+2024-11-25 14:51:53.246 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.VerifyTokenAndUpdatePassword (ForgotPasswordApp)'
+2024-11-25 14:51:53.252 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/verify-token-and-update-password - 200 null application/json; charset=utf-8 1405.6569ms
+2024-11-25 16:16:13.040 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - null null
+2024-11-25 16:16:13.182 +05:30 [INF] CORS policy execution successful.
+2024-11-25 16:16:13.211 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5026/api/forgotpassword/send-password-reset-link - 204 null null 195.7227ms
+2024-11-25 16:16:13.244 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - application/json 37
+2024-11-25 16:16:13.252 +05:30 [INF] CORS policy execution successful.
+2024-11-25 16:16:13.336 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 16:16:13.400 +05:30 [INF] Route matched with {action = "SendPasswordResetLink", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendPasswordResetLink(ForgotPasswordApp.Models.ForgotPasswordRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 16:16:13.885 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 16:16:14.071 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetTokens] ([CreatedAt], [Email], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2024-11-25 16:16:22.778 +05:30 [INF] Password reset link sent to: karthickarul254@gmail.com
+2024-11-25 16:16:22.784 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-25 16:16:22.793 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp) in 9380.6309ms
+2024-11-25 16:16:22.796 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 16:16:22.801 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - 200 null text/plain; charset=utf-8 9557.9308ms
+2024-11-25 23:44:36.212 +05:30 [INF] Application is shutting down...
+2024-11-25 23:49:32.632 +05:30 [INF] User profile is available. Using 'C:\Users\ksubramanian\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-25 23:49:32.756 +05:30 [INF] Now listening on: http://localhost:5026
+2024-11-25 23:49:32.762 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-25 23:49:32.769 +05:30 [INF] Hosting environment: Development
+2024-11-25 23:49:32.775 +05:30 [INF] Content root path: C:\Users\ksubramanian\ForgotPasswordApp
+2024-11-25 23:49:59.917 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - application/json 46
+2024-11-25 23:49:59.957 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-11-25 23:50:00.053 +05:30 [INF] Executing endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 23:50:00.155 +05:30 [INF] Route matched with {action = "SendPasswordResetLink", controller = "ForgotPassword"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendPasswordResetLink(ForgotPasswordApp.Models.ForgotPasswordRequest) on controller ForgotPasswordApp.Controllers.ForgotPasswordController (ForgotPasswordApp).
+2024-11-25 23:50:04.037 +05:30 [INF] Executed DbCommand (95ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Pincode], [a].[SecurityStamp], [a].[State], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-25 23:50:04.760 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetTokens] ([CreatedAt], [Email], [Token])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2024-11-25 23:50:08.674 +05:30 [INF] Password reset link sent to: karthickarul254@gmail.com
+2024-11-25 23:50:08.692 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-25 23:50:08.749 +05:30 [INF] Executed action ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp) in 8573.5214ms
+2024-11-25 23:50:08.758 +05:30 [INF] Executed endpoint 'ForgotPasswordApp.Controllers.ForgotPasswordController.SendPasswordResetLink (ForgotPasswordApp)'
+2024-11-25 23:50:08.783 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5026/api/forgotpassword/send-password-reset-link - 200 null text/plain; charset=utf-8 8870.9556ms

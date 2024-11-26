@@ -1,0 +1,5 @@
+2024-11-24 13:28:40.851 +05:30 [INF] User profile is available. Using 'C:\Users\ksubramanian\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-24 13:28:40.915 +05:30 [INF] Now listening on: http://localhost:5026
+2024-11-24 13:28:40.920 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-24 13:28:40.922 +05:30 [INF] Hosting environment: Development
+2024-11-24 13:28:40.925 +05:30 [INF] Content root path: C:\Users\ksubramanian\ForgotPasswordApp
